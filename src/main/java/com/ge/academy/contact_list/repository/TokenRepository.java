@@ -1,7 +1,7 @@
-package repository;
+package com.ge.academy.contact_list.repository;
 
-import entity.Token;
-import entity.UserRole;
+import com.ge.academy.contact_list.entity.Token;
+import com.ge.academy.contact_list.entity.UserRole;
 
 /**
  * Created by 212566307 on 6/13/2016.

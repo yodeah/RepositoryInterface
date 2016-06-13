@@ -1,4 +1,4 @@
-package entity;
+package com.ge.academy.contact_list.entity;
 
 /**
  * Created by 212393105 on 2016.06.13..
@@ -28,7 +28,7 @@ public class User {
     public String getUserName() {
         return userName;
     }
-     
+
 
     public void setUserName(String userName) {
         this.userName = userName;

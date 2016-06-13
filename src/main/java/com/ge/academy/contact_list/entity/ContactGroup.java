@@ -15,6 +15,15 @@ public class ContactGroup {
         this.name = name;
     }
 
+    public ContactGroup(String displayName) {
+        this.displayName = displayName;
+    }
+
+    public ContactGroup(ContactGroup contactGroup) {
+        this.displayName = contactGroup.getDisplayName();
+        this.name = contactGroup.getName();
+    }
+
     public String getDisplayName() {
         return displayName;
     }
@@ -31,6 +40,7 @@ public class ContactGroup {
         this.name = name;
     }
 
+
     @Override
     public String toString() {
         return "ContactGroup{" +
@@ -38,7 +48,6 @@ public class ContactGroup {
                 ", displayName= " + displayName +
                 '}';
     }
-
 
     @Override
     public boolean equals(Object o) {

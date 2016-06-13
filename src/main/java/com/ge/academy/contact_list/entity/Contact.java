@@ -2,7 +2,7 @@ package com.ge.academy.contact_list.entity;
 
 import java.util.List;
 
-class Contact {
+public class Contact {
     private String id;
     private String firstName;
     private String lastName;

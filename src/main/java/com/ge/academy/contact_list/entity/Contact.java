@@ -12,6 +12,9 @@ public class Contact {
     private String jobTitle;
     private List<ContactGroup> contactGroups;
 
+    public Contact() {
+    }
+
     public Contact(String id, String firstName, String lastName, String homeEmail, String workEmail, String nickName, String jobTitle, List<ContactGroup> contactGroups) {
         this.id = id;
         this.firstName = firstName;

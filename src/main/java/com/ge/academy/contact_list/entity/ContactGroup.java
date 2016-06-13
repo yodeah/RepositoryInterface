@@ -39,6 +39,7 @@ public class ContactGroup {
                 '}';
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -46,7 +47,9 @@ public class ContactGroup {
 
         ContactGroup that = (ContactGroup) o;
 
-        return name != null ? name.equals(that.name) : that.name == null;
+        if (name != null ? !name.equals(that.name) : that.name != null) return false;
+        return displayName != null ? displayName.equals(that.displayName) : that.displayName == null;
+
     }
 
     @Override

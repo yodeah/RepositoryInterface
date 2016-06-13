@@ -11,10 +11,7 @@ import java.util.List;
 public interface ContactGroupRepository {
 
     ContactGroup save(ContactGroup contactGroup) throws EntityNotFoundException;
-
     void delete(String contactId) throws EntityNotFoundException;
-
     ContactGroup findOne(String contactId) throws EntityNotFoundException;
-
     List<ContactGroup> findAll();
 }

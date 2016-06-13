@@ -1,6 +1,7 @@
 package com.ge.academy.contact_list.repository;
 
 import com.ge.academy.contact_list.entity.ContactGroup;
+import com.ge.academy.contact_list.exception.EntityNotFoundException;
 
 import java.util.List;
 
@@ -9,11 +10,11 @@ import java.util.List;
  */
 public interface ContactGroupRepository {
 
-    ContactGroup save(ContactGroup contactGroup);
+    ContactGroup save(ContactGroup contactGroup) throws EntityNotFoundException;
 
-    void delete(String contactId);
+    void delete(String contactId) throws EntityNotFoundException;
 
-    ContactGroup findOne(String contactId);
+    ContactGroup findOne(String contactId) throws EntityNotFoundException;
 
     List<ContactGroup> findAll();
 }

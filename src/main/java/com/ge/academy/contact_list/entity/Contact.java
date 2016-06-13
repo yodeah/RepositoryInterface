@@ -89,4 +89,35 @@ public class Contact {
     public void setContactGroup(List<ContactGroup> contactGroups) {
         this.contactGroups = contactGroups;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Contact contact = (Contact) o;
+
+        if (id != null ? !id.equals(contact.id) : contact.id != null) return false;
+        if (firstName != null ? !firstName.equals(contact.firstName) : contact.firstName != null) return false;
+        if (lastName != null ? !lastName.equals(contact.lastName) : contact.lastName != null) return false;
+        if (homeEmail != null ? !homeEmail.equals(contact.homeEmail) : contact.homeEmail != null) return false;
+        if (workEmail != null ? !workEmail.equals(contact.workEmail) : contact.workEmail != null) return false;
+        if (nickName != null ? !nickName.equals(contact.nickName) : contact.nickName != null) return false;
+        if (jobTitle != null ? !jobTitle.equals(contact.jobTitle) : contact.jobTitle != null) return false;
+        return contactGroups != null ? contactGroups.equals(contact.contactGroups) : contact.contactGroups == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
+        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
+        result = 31 * result + (homeEmail != null ? homeEmail.hashCode() : 0);
+        result = 31 * result + (workEmail != null ? workEmail.hashCode() : 0);
+        result = 31 * result + (nickName != null ? nickName.hashCode() : 0);
+        result = 31 * result + (jobTitle != null ? jobTitle.hashCode() : 0);
+        result = 31 * result + (contactGroups != null ? contactGroups.hashCode() : 0);
+        return result;
+    }
 }

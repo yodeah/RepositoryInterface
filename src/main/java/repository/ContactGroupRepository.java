@@ -13,7 +13,7 @@ public interface ContactGroupRepository {
 
     void delete(String contactId);
 
-    ContactGroup findOne (String contactId);
+    ContactGroup findOne(String contactId);
 
     List<ContactGroup> findAll();
 }

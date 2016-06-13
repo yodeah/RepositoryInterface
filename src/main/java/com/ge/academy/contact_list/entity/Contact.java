@@ -10,12 +10,12 @@ public class Contact {
     private String workEmail;
     private String nickName;
     private String jobTitle;
-    private List<ContactGroup> contactGroups;
+    private ContactGroup contactGroup;
 
     public Contact() {
     }
 
-    public Contact(String id, String firstName, String lastName, String homeEmail, String workEmail, String nickName, String jobTitle, List<ContactGroup> contactGroups) {
+    public Contact(String id, String firstName, String lastName, String homeEmail, String workEmail, String nickName, String jobTitle, ContactGroup contactGroup) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -23,7 +23,7 @@ public class Contact {
         this.workEmail = workEmail;
         this.nickName = nickName;
         this.jobTitle = jobTitle;
-        this.contactGroups = contactGroups;
+        this.contactGroup = contactGroup;
     }
 
     public Contact(Contact contact) {
@@ -34,14 +34,14 @@ public class Contact {
         this.workEmail = contact.workEmail;
         this.nickName = contact.nickName;
         this.jobTitle = contact.jobTitle;
-        this.contactGroups = contact.contactGroups;
+        this.contactGroup = contact.contactGroup;
     }
 
     public String getId() {
         return id;
     }
 
-    private void setId(String id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -93,12 +93,12 @@ public class Contact {
         this.jobTitle = jobTitle;
     }
 
-    public List<ContactGroup> getContactGroups() {
-        return contactGroups;
+    public ContactGroup getContactGroup() {
+        return contactGroup;
     }
 
-    public void setContactGroup(List<ContactGroup> contactGroups) {
-        this.contactGroups = contactGroups;
+    public void setContactGroup(ContactGroup contactGroup) {
+        this.contactGroup = contactGroup;
     }
 
     @Override
@@ -115,7 +115,7 @@ public class Contact {
         if (workEmail != null ? !workEmail.equals(contact.workEmail) : contact.workEmail != null) return false;
         if (nickName != null ? !nickName.equals(contact.nickName) : contact.nickName != null) return false;
         if (jobTitle != null ? !jobTitle.equals(contact.jobTitle) : contact.jobTitle != null) return false;
-        return contactGroups != null ? contactGroups.equals(contact.contactGroups) : contact.contactGroups == null;
+        return contactGroup != null ? contactGroup.equals(contact.contactGroup) : contact.contactGroup == null;
 
     }
 
@@ -128,7 +128,7 @@ public class Contact {
         result = 31 * result + (workEmail != null ? workEmail.hashCode() : 0);
         result = 31 * result + (nickName != null ? nickName.hashCode() : 0);
         result = 31 * result + (jobTitle != null ? jobTitle.hashCode() : 0);
-        result = 31 * result + (contactGroups != null ? contactGroups.hashCode() : 0);
+        result = 31 * result + (contactGroup != null ? contactGroup.hashCode() : 0);
         return result;
     }
 }

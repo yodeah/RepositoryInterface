@@ -26,6 +26,17 @@ public class Contact {
         this.contactGroups = contactGroups;
     }
 
+    public Contact(Contact contact) {
+        this.id = contact.id;
+        this.firstName = contact.firstName;
+        this.lastName = contact.lastName;
+        this.homeEmail = contact.homeEmail;
+        this.workEmail = contact.workEmail;
+        this.nickName = contact.nickName;
+        this.jobTitle = contact.jobTitle;
+        this.contactGroups = contact.contactGroups;
+    }
+
     public String getId() {
         return id;
     }

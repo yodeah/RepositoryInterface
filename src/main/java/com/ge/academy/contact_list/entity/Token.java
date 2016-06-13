@@ -19,6 +19,13 @@ public class Token {
         this.expiresOn = expiresOn;
     }
 
+    public Token(Token token) {
+        this.tokenId = token.tokenId;
+        this.user = token.user;
+        this.userRole = token.userRole;
+        this.expiresOn = token.expiresOn;
+    }
+
     public String getTokenId(){
         return tokenId;
     }
@@ -57,4 +64,5 @@ public class Token {
         result = 31 * result + (userRole != null ? userRole.hashCode() : 0);
         return result;
     }
+
 }

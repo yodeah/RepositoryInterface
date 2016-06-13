@@ -1,6 +1,6 @@
-package repository;
+package com.ge.academy.contact_list.repository;
 
-import entity.User;
+import com.ge.academy.contact_list.entity.User;
 
 import java.util.List;
 

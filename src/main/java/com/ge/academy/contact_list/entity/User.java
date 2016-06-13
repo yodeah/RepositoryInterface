@@ -1,4 +1,4 @@
-package entity;
+package com.ge.academy.contact_list.entity;
 
 /**
  * Created by 212393105 on 2016.06.13..

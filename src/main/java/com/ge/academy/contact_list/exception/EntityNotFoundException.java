@@ -3,7 +3,7 @@ package com.ge.academy.contact_list.exception;
 /**
  * Created by 212564370 on 6/13/2016.
  */
-public class EntityNotFoundException extends RuntimeException {
+public class  EntityNotFoundException extends RuntimeException {
     private final Class<?> entityType;
     private final Object entityId;
 

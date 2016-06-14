@@ -2,6 +2,7 @@ package com.ge.academy.contact_list.repository;
 
 import com.ge.academy.contact_list.entity.Token;
 import com.ge.academy.contact_list.entity.UserRole;
+import com.ge.academy.contact_list.exception.AuthenticationFailedException;
 import com.ge.academy.contact_list.exception.EntityNotFoundException;
 
 /**
@@ -13,5 +14,6 @@ public interface TokenRepository {
     public void delete(String tokenId) throws EntityNotFoundException;
     public Token findOne(String tokenId) throws EntityNotFoundException;
     public boolean isUserInRole(UserRole userRole);
+
 
 }

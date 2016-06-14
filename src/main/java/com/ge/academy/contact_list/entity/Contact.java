@@ -26,7 +26,7 @@ public class Contact {
     }
 
     public Contact(Contact contact) {
-        this.id = contact.id;
+        this.id = new ContactId(contact.id);
         this.firstName = contact.firstName;
         this.lastName = contact.lastName;
         this.homeEmail = contact.homeEmail;

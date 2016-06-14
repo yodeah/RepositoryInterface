@@ -19,6 +19,17 @@ public class ContactId extends ContactGroupId {
         this.contactId = contactId;
     }
 
+    public ContactId(String userName, String contactGroupName) {
+        super(userName, contactGroupName);
+        this.contactId = 0;
+    }
+
+    public ContactId(ContactId other) {
+        this.contactId = other.getContactId();
+        this.setContactGroupName(other.getContactGroupName());
+        this.setUserName(other.getUserName());
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

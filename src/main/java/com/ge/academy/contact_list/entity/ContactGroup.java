@@ -17,7 +17,7 @@ public class ContactGroup {
 
     public ContactGroup(ContactGroup contactGroup) {
         this.displayName = contactGroup.getDisplayName();
-        this.id = contactGroup.getId();
+        this.id = new ContactGroupId(contactGroup.getId());
     }
 
     public String getDisplayName() {

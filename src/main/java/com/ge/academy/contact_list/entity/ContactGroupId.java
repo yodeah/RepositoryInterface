@@ -7,9 +7,17 @@ public class ContactGroupId {
     private String userName;
     private String contactGroupName;
 
+    public ContactGroupId() {
+    }
+
     public ContactGroupId(String userName, String name) {
         this.userName = userName;
         this.contactGroupName = name;
+    }
+
+    public ContactGroupId(ContactGroupId other){
+        this.userName = other.getUserName();
+        this.contactGroupName = other.getContactGroupName();
     }
 
     public String getUserName() {

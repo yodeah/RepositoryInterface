@@ -11,10 +11,10 @@ import java.util.List;
  * Created by 212564370 on 6/13/2016.
  */
 public interface ContactRepository {
-    Contact save(Contact user) throws EntityNotFoundException;
+    Contact save(Contact contact) throws EntityNotFoundException;
     void delete(ContactId contactId) throws EntityNotFoundException;
     Contact findOne(ContactId contactId) throws EntityNotFoundException;
     List<Contact> findAll();
-    Contact findByExample(Contact contact) throws EntityNotFoundException;
+    List<Contact> findByExample(Contact contact) throws EntityNotFoundException;
     List<Contact> findByContactGroupId(ContactGroupId contactGroupId) throws EntityNotFoundException;
 }

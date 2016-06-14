@@ -26,6 +26,13 @@ public class Token {
         this.expiresOn = token.expiresOn;
     }
 
+    public Token(Token token, String tokenId) {
+        this.tokenId = tokenId;
+        this.user = token.user;
+        this.userRole = token.userRole;
+        this.expiresOn = token.expiresOn;
+    }
+
     public String getTokenId(){
         return tokenId;
     }

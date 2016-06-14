@@ -12,5 +12,5 @@ public interface AuthenticationService {
 
     public Token findTokenById(String tokenId) throws TokenExpiredException;
     public Token authenticate(String username, String password) throws AuthenticationFailedException;
-    public Token logOut(String username) throws EntityNotFoundException;
+    public boolean logOut(String username) throws EntityNotFoundException;
 }

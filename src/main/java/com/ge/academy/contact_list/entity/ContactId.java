@@ -14,8 +14,27 @@ public class ContactId extends ContactGroupId {
         this.contactId = contactId;
     }
 
-    public ContactId(String userName, long contactGroupId, long contactId) {
-        super(userName, contactGroupId);
+    public ContactId(String userName, String contactGroupName, long contactId) {
+        super(userName, contactGroupName);
         this.contactId = contactId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        ContactId contactId1 = (ContactId) o;
+
+        return contactId == contactId1.contactId;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + (int) (contactId ^ (contactId >>> 32));
+        return result;
     }
 }

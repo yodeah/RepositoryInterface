@@ -10,6 +10,7 @@ public class Contact {
     private String workEmail;
     private String nickName;
     private String jobTitle;
+    private ContactGroup contactGroup;
 
     public Contact() {
     }

@@ -4,24 +4,20 @@ package com.ge.academy.contact_list.entity;
  * Created by 212564432 on 6/13/2016.
  */
 public class ContactGroup {
-    private String name;
+    private ContactGroupId id;
     private String displayName;
 
     public ContactGroup() {
     }
 
-    public ContactGroup(String displayName, String name) {
+    public ContactGroup(String displayName, ContactGroupId id) {
         this.displayName = displayName;
-        this.name = name;
-    }
-
-    public ContactGroup(String displayName) {
-        this.displayName = displayName;
+        this.id = id;
     }
 
     public ContactGroup(ContactGroup contactGroup) {
         this.displayName = contactGroup.getDisplayName();
-        this.name = contactGroup.getName();
+        this.id = contactGroup.getId();
     }
 
     public String getDisplayName() {
@@ -33,18 +29,21 @@ public class ContactGroup {
     }
 
     public String getName() {
-        return name;
+        return id.getContactGroupName();
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public ContactGroupId getId() {
+        return id;
     }
 
+    public void setId(ContactGroupId id) {
+        this.id = id;
+    }
 
     @Override
     public String toString() {
         return "ContactGroup{" +
-                "name= " + name +
+                "name= " + id.getContactGroupName() +
                 ", displayName= " + displayName +
                 '}';
     }
@@ -56,14 +55,14 @@ public class ContactGroup {
 
         ContactGroup that = (ContactGroup) o;
 
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         return displayName != null ? displayName.equals(that.displayName) : that.displayName == null;
 
     }
 
     @Override
     public int hashCode() {
-        int result = name != null ? name.hashCode() : 0;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (displayName != null ? displayName.hashCode() : 0);
         return result;
     }

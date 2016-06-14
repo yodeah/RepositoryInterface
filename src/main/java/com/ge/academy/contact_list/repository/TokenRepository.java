@@ -13,7 +13,7 @@ public interface TokenRepository {
     public Token save(Token token) throws EntityNotFoundException;
     public void delete(String tokenId) throws EntityNotFoundException;
     public Token findOne(String tokenId) throws EntityNotFoundException;
-    public boolean isUserInRole(UserRole userRole);
+
 
 
 }

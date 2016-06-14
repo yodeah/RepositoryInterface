@@ -12,7 +12,7 @@ public class Token {
     private LocalDateTime expiresOn;
     private UserRole userRole;
 
-    public void Token(String id, User user, UserRole userRole, LocalDateTime expiresOn){
+    public Token(String id, User user, UserRole userRole, LocalDateTime expiresOn){
         this.tokenId = id;
         this.user = user;
         this.userRole = userRole;

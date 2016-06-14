@@ -11,6 +11,30 @@ public class  EntityNotFoundException extends RuntimeException {
         this(entityType, id, null);
     }
 
+    public EntityNotFoundException(String message, Class<?> entityType, Object entityId) {
+        super(message);
+        this.entityType = entityType;
+        this.entityId = entityId;
+    }
+
+    public EntityNotFoundException(String message, Throwable cause, Class<?> entityType, Object entityId) {
+        super(message, cause);
+        this.entityType = entityType;
+        this.entityId = entityId;
+    }
+
+    public EntityNotFoundException(Throwable cause, Class<?> entityType, Object entityId) {
+        super(cause);
+        this.entityType = entityType;
+        this.entityId = entityId;
+    }
+
+    public EntityNotFoundException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace, Class<?> entityType, Object entityId) {
+        super(message, cause, enableSuppression, writableStackTrace);
+        this.entityType = entityType;
+        this.entityId = entityId;
+    }
+
     public EntityNotFoundException(Class<?> entityType, Object id, Throwable cause) {
         super(entityType.getSimpleName() + " not found with id=" + id, cause);
         this.entityType = entityType;

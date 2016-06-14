@@ -6,7 +6,7 @@
 
     <groupId>com.ge.academy.contact_list</groupId>
     <artifactId>RepositoryInterface</artifactId>
-    <version>2.3 SNAPSHOT</version>
+    <version>2.3</version>
 
 
     <properties>

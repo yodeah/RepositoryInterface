@@ -14,6 +14,9 @@ public class ContactId extends ContactGroupId {
         this.contactId = contactId;
     }
 
+    public ContactId() {
+    }
+
     public ContactId(String userName, String contactGroupName, long contactId) {
         super(userName, contactGroupName);
         this.contactId = contactId;

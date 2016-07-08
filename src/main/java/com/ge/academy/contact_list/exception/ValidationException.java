@@ -9,17 +9,17 @@ import java.util.Map;
  */
 public class ValidationException extends IllegalArgumentException {
 
-	private Map<String, ArrayList<String>> errors;
+	private Map<String, ArrayList<String>> fields;
 
-	public ValidationException(Map<String, ArrayList<String>> errors) {
-		this.errors = errors;
+	public ValidationException(Map<String, ArrayList<String>> fields) {
+		this.fields = fields;
 	}
 
-	public Map<String, ArrayList<String>> getErrors() {
-		return errors;
+	public Map<String, ArrayList<String>> getFields() {
+		return fields;
 	}
 
-	public void setErrors(Map<String, ArrayList<String>> errors) {
-		this.errors = errors;
+	public void setErrors(Map<String, ArrayList<String>> fields) {
+		this.fields = fields;
 	}
 }
